@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"></p>
+    <p id="para1"></p>
+    <script>
+        // var obj={
+        //     "name":"ali",
+        //     "id":101,
+        //     "age":20
+        // }
+        
+        // document.getElementById('para').innerHTML=obj.name;
+        // for(var x in obj){
+        //     console.log(x+"---"+obj[x]);
+        // }
+
+
+
+        var obj={
+            'student':[
+                {name:"ahmed",age:20,id:101},
+                {name:"hamza",age:21,id:102},
+                {name:"hassan",age:22,id:103}
+            ]
+        }
+        // console.log(obj.student[1].name)
+
+        for(var x in obj.student){
+            for(var inner_x in obj.student[x]){
+                console.log(obj.student[x][inner_x])
+                document.getElementById('para').innerHTML+=inner_x+" : "+obj.student[x][inner_x]+"<br>";
+               
+                
+            }
+       
+        }
+    </script>
+</body>
+</html>
